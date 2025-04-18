@@ -1,0 +1,69 @@
+/* This file imports the Tailwind CSS which is loaded from CDN in the HTML file */
+
+/* Additional custom styles not already covered by TailwindCSS */
+.cosmic-pulse {
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Stars background effect */
+.stars {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Ensures smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom styling for date input to match design */
+input[type="date"] {
+  appearance: none;
+  color: white;
+  background-color: rgb(30, 41, 59);
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* Ensures responsive font sizes on mobile */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
